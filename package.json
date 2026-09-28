@@ -1,0 +1,36 @@
+{
+  "name": "sdk",
+  "description": "All the Pokémon data you'll ever need in one place, easily accessible through a modern free open-source RESTful API.\n\n## What is this?\n\nThis is a full RESTful API linked to an extensive database detailing everything about the Pokémon main game series.\n\nWe've covered everything from Pokémon to Berry Flavors.\n\n## Where do I start?\n\nWe have awesome [documentation](https://pokeapi.co/docs/v2) on how to use this API. It takes minutes to get started.\n\nThis API will always be publicly available and will never require any extensive setup process to consume.\n\nCreated by [**Paul Hallett**](https://github.com/phalt) and other [**PokéAPI contributors**](https://github.com/PokeAPI/pokeapi#contributing) around the world. Pokémon and Pokémon character names are trademarks of Nintendo.",
+  "version": "2.10.0",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "package.json"
+  ],
+  "type": "commonjs",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    }
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "format": "oxfmt --check src test/*.mjs",
+    "lint": "oxlint src test",
+    "typecheck": "tsc --noEmit",
+    "test": "npm run build && node --test \"test/**/*.test.mjs\"",
+    "prepack": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "oxfmt": "^0.59.0",
+    "oxlint": "^1.0.0",
+    "typescript": "^5.4.0"
+  }
+}
