@@ -35,6 +35,7 @@
         "required": false,
         "style": "form",
         "explode": true,
+        "jsonContent": false,
         "value": 1
       },
       {
@@ -43,6 +44,7 @@
         "required": false,
         "style": "form",
         "explode": true,
+        "jsonContent": false,
         "value": 1
       },
       {
@@ -51,6 +53,7 @@
         "required": false,
         "style": "form",
         "explode": true,
+        "jsonContent": false,
         "value": "q"
       }
     ],
@@ -95,6 +98,7 @@
         "required": true,
         "style": "simple",
         "explode": false,
+        "jsonContent": false,
         "value": "id-1"
       }
     ],
@@ -189,6 +193,7 @@
         "required": false,
         "style": "form",
         "explode": true,
+        "jsonContent": false,
         "value": 1
       },
       {
@@ -197,6 +202,7 @@
         "required": false,
         "style": "form",
         "explode": true,
+        "jsonContent": false,
         "value": 1
       }
     ],

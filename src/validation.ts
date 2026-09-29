@@ -77,8 +77,18 @@ export function validateLength(field: string, value: string, opts: LengthOptions
   }
 }
 
+// OpenAPI patterns are ECMA-262 in Unicode mode, which `\p{L}` requires. A
+// pattern valid only outside it (`\-` outside a class) keeps that reading.
+function compilePattern(pattern: string): RegExp {
+  try {
+    return new RegExp(pattern, "u");
+  } catch {
+    return new RegExp(pattern);
+  }
+}
+
 export function validatePattern(field: string, value: string, pattern: string): void {
-  if (!new RegExp(pattern).test(value)) {
+  if (!compilePattern(pattern).test(value)) {
     throw new SdkValidationError(
       field,
       "pattern",

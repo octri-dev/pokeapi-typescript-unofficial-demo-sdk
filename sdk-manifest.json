@@ -25813,7 +25813,7 @@
   },
   "versionFormat": {
     "policy": "semver",
-    "normalizedVersion": "2.10.0"
+    "normalizedVersion": "2.10.1"
   },
   "execution": {
     "form": "native-async",

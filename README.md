@@ -16,12 +16,12 @@ This API will always be publicly available and will never require any extensive 
 
 Created by [**Paul Hallett**](https://github.com/phalt) and other [**PokéAPI contributors**](https://github.com/PokeAPI/pokeapi#contributing) around the world. Pokémon and Pokémon character names are trademarks of Nintendo.
 
-> Package `sdk` · Version `2.10.0` · 102 operations
+> Package `@octri-dev/pokeapi-unofficial-demo-sdk` · Version `2.10.1` · 102 operations
 
 ## Installation
 
 ```sh
-npm install sdk@2.10.0
+npm install @octri-dev/pokeapi-unofficial-demo-sdk@2.10.1
 ```
 
 ## Quickstart
@@ -29,7 +29,7 @@ npm install sdk@2.10.0
 The example calls `meta_retrieve` (GET `/api/v2/meta/`), a low-friction operation that requires no request arguments.
 
 ```ts
-import { PokAPI } from "sdk";
+import { PokAPI } from "@octri-dev/pokeapi-unofficial-demo-sdk";
 
 async function main() {
   const client = new PokAPI({
